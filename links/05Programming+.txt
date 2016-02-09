@@ -1,0 +1,12 @@
+http://www.khanacademy.org|Khan Academy
+http://ocw.mit.edu/index.htm|MIT OCW
+http://www.codecademy.com/learn|CodeCademy
+https://www.edx.org|edX
+http://thenextweb.com/dd/2012/10/21/so-you-want-to-be-a-programmer-huh-heres-25-ways-to-learn-online/|27 ways to learn to code
+http://geekybrains.com/2013/02/best-websites-to-learn-coding-easily.html|GeekyBrains Websites for coding
+http://rogerdudler.github.io/git-guide/|Git easy guide
+http://www.html5rocks.com/en/|HTML5 rocks
+https://css-tricks.com|CSS tricks 
+http://projecteuler.net|Project euler 
+https://trinket.io/|Trinket.io 
+http://www.cheat-sheets.org/|cheat sheets

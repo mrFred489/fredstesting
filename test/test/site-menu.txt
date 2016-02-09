@@ -1,0 +1,21 @@
+
+    <div id="Menu">
+        <div class="MenuPointOuter">
+            <div class="MenuPoint"><a href="/" class="MenuPointLink"><p class="MenuPointTXT">Frontpage</p></a></div>
+        </div>
+        <div class="MenuPointOuter">
+            <div class="MenuPoint"><a href="/me/" class="MenuPointLink"><p class="MenuPointTXT">About me</p></a></div>
+        </div>
+        <div class="MenuPointOuter">
+            <div class="MenuPoint"><a href="/images/" class="MenuPointLink"><p class="MenuPointTXT">Images</p></a></div>
+        </div>
+        <div id="Projects">
+            Projects
+        </div>
+        <div class="MenuPointOuter">
+            <div class="MenuPoint"><a href="/links/" class="MenuPointLink"><p class="MenuPointTXT">Links page</p></a></div>
+        </div>
+        <div class="MenuPointOuter">
+            <div class="MenuPoint"><a href="/ProjectEuler/" class="MenuPointLink"><p class="MenuPointTXT">Project Euler</p></a></div>
+        </div>
+    </div>

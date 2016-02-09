@@ -1,0 +1,10 @@
+http://politiken.dk|Politiken
+http://www.bbc.co.uk|BBC
+http://www.theguardian.com|The Guardian
+http://appleinsider.com|Apple Insider
+http://io9.com|io9
+http://gizmodo.com|Gizmodo
+http://www.wired.com|Wired
+http://www.engadget.com|Engadget
+http://distrowatch.com/|Distro Watch
+http://www.phoronix.com/scan.php?page=home|Phoronix

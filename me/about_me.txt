@@ -1,0 +1,13 @@
+
+I am a !age year old danish boy and i am currently in my third year of gymnasium. 
+I study mainly math and physics in school, and i have taught myself some html and css.
+In school i have learned some python, so expect some of that on here too.
+
+Programming languages i have experience with:
+•Python
+•html
+•css
+•Javascript
+•Arduino
+•Java
+•php

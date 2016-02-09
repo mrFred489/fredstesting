@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	background: url(Billeder/fresh_snow.png);
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#Head{
+	z-index:1;
+	height: 300px;
+	width: 300px;
+	position:fixed;
+	background-color: #4478D5;
+	margin-left:50%;
+	top:-250px;
+	left: -150px;
+	border-radius: 150px;
+}
+#Headtxt{
+	left:75px;
+	width:150px;
+	position: relative;
+	font-size: 1.3em;
+	text-align: center;
+	top:240px;
+}
+
+#Headtxt2{
+	/*font-size: 1em;*/
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	color:white;
+	text-decoration:none;
+}

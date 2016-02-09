@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* CSS Document */
+/* /sommerhus/billeder */
+
+#main{
+	width: 1000px;
+	margin-top: 55px;
+	margin-left:50%;
+	left: -500px;
+	overflow-y:visible;
+	border: solid 1px black;
+	position: relative;
+}
+
+#kort{
+	
+	width:500px;
+	margin: 0px;
+    border-width: 0px;
+    padding: 0px;
+    right: 0px;
+    display: inline-table;
+}
+
+#textHolder{
+	display: inline-table;
+	width: 495px;
+	margin: 0px;
+    border-width: 0px;
+    padding: 0px;
+}

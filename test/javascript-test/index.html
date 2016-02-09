@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Javascript test</title>
+
+</head>
+
+<body>
+    <a href="http://jquery.com/">jQuery</a>
+    <script src="jquery.js"></script>
+    <script>
+$( document ).ready(function() {
+    var user = prompt("are you SMART, STUPID, INTELLIGENT or RETARDED?").toLowerCase()
+    var age = prompt("how old are you?")
+    var stuff = true
+    if (isNaN(age)){
+        alert("That is not even a number!")
+    }
+    else{
+        age = parseInt(age)
+    }
+    switch(user){
+        case "smart":
+            if (age < 18 && stuff){
+                alert("congratulations, but are you sure?")
+            }
+            else{
+                alert("You are old enough to judge that, i believe you")
+            }
+            
+            break;
+        case "stupid":
+            if (age < 18){
+                alert("Come on, dont be mean to yourself, you are alright!")
+            }
+            else{
+                alert("I really don't hope so, you dont have too much time left to get smarter")
+            }
+            break;
+        case "intelligent":
+            if (age < 18){
+                alert("are you completely honest with yourself right now?")
+            }
+            else{
+                alert("I know that you as an adult is honest to yourself, right!")
+            }
+            break;
+        case "retarded":
+            if (age < 18){
+                alert("That can't be true, i think you are fine!")
+            }
+            else{
+                alert("if you were really retarded, you would not be over 18, unless you are even lying about that!")
+            }
+            break;
+        default:
+            if (age > 18 || stuff){
+                alert("that is not even one of the answers, you must truely be retarded")
+            }
+            
+    }
+ 
+    $( "a" ).click(function( event ) {
+ 
+        alert( "The link will no longer take you to jquery.com" );
+            event.preventDefault();
+ 
+    });
+$( "a" ).click(function( event ) {
+ 
+    event.preventDefault();
+ 
+    $( this ).hide( "slow" );
+ 
+});
+ 
+});
+ 
+    // Your code goes here.
+ 
+    </script>
+    </br>
+    
+</body>
+</html>

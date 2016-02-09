@@ -1,0 +1,6 @@
+https://steamdb.info|SteamDB
+http://astats.astats.nl/astats/|astats
+http://steam.tools/itemvalue/|Item value sorter
+http://backpack.tf/pricelist|backpack.tf
+http://steamcommunity.com|Steam community
+http://steamgaug.es|Stamgauge

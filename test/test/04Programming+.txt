@@ -1,0 +1,8 @@
+http://www.khanacademy.org|Khan Academy
+http://ocw.mit.edu/index.htm|MIT OCW
+http://w3schools.com|W3Schools
+http://www.codecademy.com/learn|Code Academy
+https://www.edx.org|edX
+http://www.radiolab.org|Radio Lab
+http://thenextweb.com/dd/2012/10/21/so-you-want-to-be-a-programmer-huh-heres-25-ways-to-learn-online/|27 ways to learn to code
+http://geekybrains.com/2013/02/best-websites-to-learn-coding-easily.html|GeekyBrains Websites for coding

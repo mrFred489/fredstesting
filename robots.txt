@@ -1,0 +1,5 @@
+# robots.txt for http://fredstesting.dk/
+
+User-agent: *
+
+Disallow: /test/

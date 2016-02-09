@@ -1,0 +1,1 @@
+ftp.storlines("STOR " + name, open(path, "rb"))

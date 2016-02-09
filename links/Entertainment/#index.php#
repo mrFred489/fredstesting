@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link type="text/css" rel="stylesheet" href="../../StylesheetHead.css"/>
+    <link type="text/css" rel="stylesheet" href="../Stylesheet.css"/>
+    <?php
+        require_once '../../Mobile_Detect.php';
+        $detect = new Mobile_Detect;
+        $ismobile = ($detect->isMobile());
+        if ($ismobile){
+            echo '<link type="text/css" rel="stylesheet" href="../StylesheetMobile.css" />';
+            $columns = 3;
+        }
+        else{
+            echo '<link type="text/css" rel="stylesheet" href="../StylesheetBig.css" media="(min-width: 1401px)"/>';
+            echo '<link type="text/css" rel="stylesheet" href="../StylesheetMedium.css" media="(max-width: 1400px)"/>';
+            $columns = 6;
+        }
+    ?>
+    
+    
+    <link rel="shortcut icon" href="../../apple-touch-icon.png"/>
+    <title> Entertainment </title>
+</head>
+<body>
+	<div id="Head">
+    	<h1 id="Headtxt"><a href="../../" id="Headtxt2">Freds testing</a></h1>
+	</div>
+    
+    <?php
+        
+        
+        function endswith($string, $test) { // laver funktion til at finde ud af hvad linje ender med
+            $strlen = strlen($string); // finder lÃ¦ngen af strengen
+            $testlen = strlen($test); // finder lÃ¦ngen af det der skal testes
+            if ($testlen > $strlen) return false; // hvis det der skal testes er lÃ¦ngere end strengen returneres false
+            return substr_compare($string, $test, $strlen - $testlen, $testlen) === 0; // bruger substr_compare til at sammenligen strengen med det der skal testes
+        }
+        if ($handle = opendir('.')) { // forsÃ¸ger at Ã¥bne den aktuelle mappe
+            echo '<div id="LinksContainer">' . "\n"; // laver html starten af links container
+            
+            $files = array(); // laver et blankt array
+            while (false !== ($entry = readdir($handle))) { // sÃ¥ lÃ¦nge der er flere filer i mappen
+                $files[] = $entry; // tilfÃ¸jer hver fil til det array vi lige har lavet 
+            }
+            sort($files); // sorterer arrayet med filer sÃ¥ det stÃ¥r alfabetisk
+            $categories = array(); // laver blankt array til kategorier
+            foreach($files as $entry) { // for loop for hver fil
+                if ($entry != "." && $entry != ".." && $entry != "links.txt" && endswith($entry, ".txt")) { // udelukker filer vi ikke bruger
+                    $category = "";
+                    $contents = file($entry); // fÃ¥r filen til en variabel
+                    $num = strripos($entry, "."); // finder lÃ¦ngen af kategori navnet
+                    $name = substr($entry, 2, $num-2); // fÃ¥r kategori navnet
+                    $category = $category . '<div class="Category">' . "\n"; // tilfÃ¸jer html til kategori streng sÃ¥ der stÃ¥r Category fÃ¸r navnet pÃ¥ kategorien
+                    $category = $category . '<p class="categoryIndex">Category</p>'; 
+
+                    if ($ismobile){ // tilfÃ¸jer en linje ryk hvis det er pÃ¥ mobil
+                        $category = $category . "<br/>";
+                    }
+                    
+                    $category = $category . '<p class="CategoryTXT">' . $name . '</p><div class="TableLinkContainer">' . "\n"; // tilfÃ¸jer html der sÃ¦tter navnet af kategorien ind
+                    
+
+                    foreach($contents as $line) { // for hver linje i filen
+                        $num = strripos($line, "|"); // fÃ¥rlÃ¦ngen af linket
+                        $link = substr($line, 0, $num); // fÃ¥r linket
+                        $name = substr($line, $num+1, -1); // fÃ¥r navnet fra linjen
+                        $category = $category . '<a href="' . $link . '" class="TableLink"><p class="linkIndex">Link</p>' . $name . '</a><br/>' . "\n"; // indsÃ¦tter linket
+                    }
+
+                    // nu er alle links for kategorien indsat
+
+                    $category = $category . "</div></div>\n\n\n"; // indsÃ¦tter html afslutningen 
+                    $categories[] = $category; // tilfÃ¸jer katogierien til listen af kategorier
+                }
+                
+            }
+
+            $numcate = count($categories); // finder antallet af kategorier
+            $numextra = $numcate - $columns; // finder hvor mange kategorier der er flere end antal kolonner
+            if ($numextra > $columns){ // hvis der er flere kategorier end kolonner
+                $intall = floor($numextra / $columns); // find ud af hvor mange kategorier der skal vÃ¦re per kolonne
+                $intextra = $numextra - ($intall*$columns); // finder ud af hvor mange kolonner der skal have en ekstra
+            }
+            else{
+                $intextra = $numextra; // hvis der kun skal vÃ¦re en ekstra rÃ¦kke, sÃ¥ skal intextra vÃ¦re det samme som numextra
+                $intall = 0; // intall skal vÃ¦re nul hvis det kun er en rÃ¦kke der er fÃ¦lles for alle kolonner
+            }
+            //$n = 0;
+            for ($i = 0; $i < $columns; $i++){ // for hver kolonne 
+                echo '<div class="columns">'; // indsÃ¦tter html for kolonne
+                for ($m = 0; $m <= $intall; $m++){ // for hver rÃ¦kke i kolonnen
+                    echo $categories[$i + $m * $columns]; // tilfÃ¸jer en kategori
+                    //$n++;
+                }
+                if ($i < $intextra){ // hvis kolonnen skal have en ekstra kategori end det den sidste skal have
+                    echo $categories[$columns*($intall+1)+$i]; // tilfÃ¸jer kategori
+                    //$n++;
+                }
+                
+                echo '</div>';
+            }
+            echo "</div>\n";
+        }
+
+    ?>
+
+
+</body>
+</html>

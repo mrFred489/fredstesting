@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* CSS Document */
+/* /sommerhus/kalender */
+
+#calendarDiv {
+	left:50%;
+	margin-left: -500px;
+	position: relative;
+	top: 55px;
+	width: 1000px;
+}

@@ -1,0 +1,1 @@
+mail("frederik.lauridsen@gmail.com", "test1", "Hey! det er en test!")
